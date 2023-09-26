@@ -23,6 +23,7 @@ import Page404 from "../views/layouts/error/404.vue";
 import Page500 from "../views/layouts/error/500.vue";
 import PageMaintenance from "../views/layouts/error/maintenance.vue";
 import Tables from "../views/tables.vue";
+import doctors from "@/views/admin/doctors";
 
 const appname = "Dashboard Admin Template";
 
@@ -141,6 +142,14 @@ const routes = [
     meta: {
       title: "Tables" + appname,
     },
+  },
+
+  // router admin
+  {
+    path: "/doctors",
+    name: "Doctors",
+    component: doctors,
+    meta: { title: "Dashboard " + appname },
   },
 ];
 

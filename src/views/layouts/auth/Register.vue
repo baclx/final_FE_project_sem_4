@@ -6,16 +6,16 @@
           <div
             class="form-body max-w-xl mx-auto lg:p-20 p-8 lg:mt-10 mt-5 space-y-8"
           >
-            <div
-              class="form-head cursor-pointer"
-              @click="$router.push('/')"
-            >
-              <img
-                src="../../../assets/logo/logo.svg"
-                alt=""
-                class="w-10"
-              />
-            </div>
+<!--            <div-->
+<!--              class="form-head cursor-pointer"-->
+<!--              @click="$router.push('/')"-->
+<!--            >-->
+<!--              <img-->
+<!--                src="../../../assets/logo/logo.svg"-->
+<!--                alt=""-->
+<!--                class="w-10"-->
+<!--              />-->
+<!--            </div>-->
             <div class="space-y-3">
               <h2 class="dark:text-white font-semibold text-gray-800 text-4xl">
                 Create new account?

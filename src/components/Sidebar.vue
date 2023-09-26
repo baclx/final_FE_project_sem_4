@@ -224,6 +224,84 @@
           </router-link>
         </div>
       </div>
+      <div class="pb-5">
+        <div class="wrap-item mt-4 dark:text-gray-500">
+          <div class="item">
+            <router-link
+                to="/doctors"
+                exact
+                class="w-full flex text-left rounded-md box-border p-3 hover:bg-gray-200 dark:hover:bg-gray-700"
+            >
+              <span class="mr-3 text-xl"><Icon icon="bxs:dashboard" /></span>
+              <span class="w-full"> Doctors </span>
+            </router-link>
+          </div>
+          <div class="item mt-3">
+            <menu-accordion>
+              <template v-slot:icon>
+                <Icon icon="ri:pages-fill" />
+              </template>
+              <template v-slot:title> Doctors </template>
+              <template v-slot:content>
+                <div class="">
+                  <router-link
+                      to="/blank"
+                      class="w-full text-left block rounded-md p-3 hover:bg-gray-200 dark:hover:bg-gray-700"
+                  >
+                    Blank Page
+                  </router-link>
+                  <menu-accordion>
+                    <template v-slot:title> Error Page </template>
+                    <template v-slot:content>
+                      <router-link
+                          to="/404page"
+                          class="w-full text-left block rounded-md p-3 hover:bg-gray-200 dark:hover:bg-gray-700"
+                      >
+                        404 page
+                      </router-link>
+                      <router-link
+                          to="/500"
+                          class="w-full text-left block rounded-md p-3 hover:bg-gray-200 dark:hover:bg-gray-700"
+                      >
+                        500 page
+                      </router-link>
+                      <router-link
+                          to="/maintenance"
+                          class="w-full text-left block rounded-md p-3 hover:bg-gray-200 dark:hover:bg-gray-700"
+                      >
+                        Maintenance page
+                      </router-link>
+                    </template>
+                  </menu-accordion>
+                  <menu-accordion>
+                    <template v-slot:title> Authentication </template>
+                    <template v-slot:content>
+                      <router-link
+                          to="/auth/login"
+                          class="w-full text-left block rounded-md p-3 hover:bg-gray-200 dark:hover:bg-gray-700"
+                      >
+                        Login
+                      </router-link>
+                      <router-link
+                          to="/auth/register"
+                          class="w-full text-left block rounded-md p-3 hover:bg-gray-200 dark:hover:bg-gray-700"
+                      >
+                        Register
+                      </router-link>
+                      <router-link
+                          to="/auth/forgot-password"
+                          class="w-full text-left block rounded-md p-3 hover:bg-gray-200 dark:hover:bg-gray-700"
+                      >
+                        Forgot Password
+                      </router-link>
+                    </template>
+                  </menu-accordion>
+                </div>
+              </template>
+            </menu-accordion>
+          </div>
+        </div>
+      </div>
     </div>
   </nav>
 </template>

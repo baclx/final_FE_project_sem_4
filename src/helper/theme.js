@@ -6,24 +6,40 @@ export const setDarkMode = (toggle) => {
     if (toggle) {
       document.documentElement.classList.add("dark");
       localStorage.setItem("color-theme", "dark");
+      const table = document.getElementById("table");
+      if (table) {
+        table.classList.add("text-white");
+      }
     } else {
       document.documentElement.classList.remove("dark");
       localStorage.setItem("color-theme", "light");
+      const table = document.getElementById("table");
+      if (table) {
+        table.classList.remove("text-white");
+      }
     }
     // if NOT set via local storage previously
   } else {
     if (document.documentElement.classList.contains("light")) {
       document.documentElement.classList.remove("dark");
       localStorage.setItem("color-theme", "light");
+      const table = document.getElementById("table");
+      if (table) {
+        table.classList.remove("text-white");
+      }
     } else {
       document.documentElement.classList.add("dark");
       localStorage.setItem("color-theme", "dark");
+      const table = document.getElementById("table");
+      if (table) {
+        table.classList.add("text-white");
+      }
     }
   }
 };
 
 export const loadDarkMode = () => {
-  const isDark = localStorage.getItem("color-theme") == "dark" ? true : false;
+  const isDark = localStorage.getItem("color-theme") === "dark" ? true : false;
 
   if (localStorage.getItem("color-theme")) {
     if (localStorage.getItem("color-theme") === "dark") {

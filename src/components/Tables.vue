@@ -1,55 +1,31 @@
 <template>
-  <table>
-    <thead>
-      <tr>
-        <th
-          v-for="(label, labelIndex) in labels"
-          :key="labelIndex"
-        >
-          {{ label.text }}
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr
-        v-for="(item, itemIndex) in Tables"
-        :key="itemIndex"
-      >
-        <td>{{ 1 }}</td>
-      </tr>
-    </tbody>
-  </table>
+  <div>
+    <v-tables-3 :data="tableData" :options="tableOptions"></v-tables-3>
+  </div>
 </template>
 
 <script>
-  export default {
-    name: "TableComponents",
-    props: {
-      labels: {
-        type: Array,
-        default: () => [
-          {
-            field: "id",
-            text: "ID",
-          },
-          {
-            field: "name",
-            text: "Name",
-          },
-          {
-            field: "date_created",
-            text: "Created At",
-          },
+import VTables3 from 'v-tables-3';
+
+export default {
+  components: {
+    VTables3,
+  },
+  data() {
+    return {
+      tableData: [
+        { id: 1, name: 'John Doe', age: 25 },
+        { id: 2, name: 'Jane Smith', age: 30 },
+        { id: 3, name: 'Bob Johnson', age: 35 },
+      ],
+      tableOptions: {
+        columns: [
+          { field: 'id', label: 'ID' },
+          { field: 'name', label: 'Name' },
+          { field: 'age', label: 'Age' },
         ],
       },
-      Tables: {
-        type: Array,
-        default: [
-          {
-            text: "ID",
-          },
-        ],
-      },
-    },
-  };
+    };
+  },
+};
 </script>
