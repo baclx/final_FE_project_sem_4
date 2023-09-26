@@ -46,6 +46,7 @@
   import Footer from "@/components/Footer";
   // npm-js
   import Scrollbar from "smooth-scrollbar";
+  import PatientService from "@/service/PatientService";
 
   export default {
     name: "App",
@@ -54,7 +55,12 @@
       return {
         sidebarDark: false,
         sidebar: false,
+        patient: null,
       };
+    },
+
+    created() {
+      // this.loadUser();
     },
 
     components: {
@@ -69,6 +75,12 @@
       close() {
         this.sidebar = false;
       },
+      //test call api
+      loadUser(){
+        let patient = this.patient;
+        return PatientService.getUser()
+            .then(response => (patient = response.data));
+      }
     },
     watch: {
       $route() {
