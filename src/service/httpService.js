@@ -16,7 +16,6 @@ export default {
     },
 
     get(url) {
-        // console.log('GET URL');
         return axios.get(url).catch(error => {
             this.handleGlobalError(error);
             throw error;

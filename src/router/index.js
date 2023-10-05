@@ -23,7 +23,7 @@ import Page404 from "../views/layouts/error/404.vue";
 import Page500 from "../views/layouts/error/500.vue";
 import PageMaintenance from "../views/layouts/error/maintenance.vue";
 import Tables from "../views/tables.vue";
-import doctors from "@/views/admin/doctors";
+import doctors from "@/views/admin/doctors/doctors";
 
 const appname = "Dashboard Admin Template";
 
